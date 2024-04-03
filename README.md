@@ -36,4 +36,4 @@ Example usage:
 - unzipping files, applying the ICC profile, using multithreading and adding label and macro images:
 ```python /path_to/DICOMtoSVS.py /path_to_folder/DCM_zip --ICC --no-label --no-macro```
 
-
+![Figure 1_github](https://github.com/bertrandchauveau/DICOMtoSVS/assets/110421330/366ac44e-8521-4338-a475-c829192bf125)

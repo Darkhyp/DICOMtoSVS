@@ -3,6 +3,8 @@ To convert DICOM whole slide images into SVS-like TIFF pyramidal images
 
 This work is currently under review at a scientific journal. A link to the published article will be displayed in due time.
 
+![Figure 1_github](https://github.com/bertrandchauveau/DICOMtoSVS/assets/110421330/366ac44e-8521-4338-a475-c829192bf125)
+
 Pathology Departments are encouraged to use Digital Imaging and Communication in Medicine (DICOM), a standardized nonproprietary format, for their workflow of whole slide images (WSI), like radiologists before them. While this allows for a universal workflow in routine with WSI from scanners of various manufacturers, as of April 2024, the DICOM format for WSI remains recent and not supported by many collaborative softwares for diagnostic imaging (e.g. TeleSlide) and many free commercial softwares (e.g. Aperio ImageScope, NDP.view2). This limits the actual usability of these DICOM WSI for collaborative diagnosis, research and teaching purposes. Open source tools recently added support for DICOM WSI (Bio-Formats in 2021 and OpenSlide in 2024), but implemented solutions (like in the QuPath software) do not support the International Color Consortium (ICC) profile, which can result in dull color rendering.
 
 If the DICOM format is to be the future reference WSI format, as in Radiology, commercial software will add support for this format. In the meantime, one of the solution is to convert the DICOM WSI into a more common WSI file format. Here, we use a pyramidal TIFF organization in the same way of SVS files. SVS files are actual TIFF files, with no proprietary extensions, and is the WSI file format of Aperio (Leica Biosystems). Proper solutions with thorough explanations about the conversion of DICOM to SVS-like TIFF is sparse, and dealing with the ICC profile is, to our knowledge, lacking.
@@ -35,5 +37,3 @@ Example usage:
 
 - unzipping files, applying the ICC profile, using multithreading and adding label and macro images:
 ```python /path_to/DICOMtoSVS.py /path_to_folder/DCM_zip --ICC --no-label --no-macro```
-
-![Figure 1_github](https://github.com/bertrandchauveau/DICOMtoSVS/assets/110421330/366ac44e-8521-4338-a475-c829192bf125)

@@ -33,6 +33,7 @@ def from_DICOM_to_SVS(path_to_folder, zip=True, ICC=False, multithreading=True, 
         zip (bool): True if the files need to be unzipped, False otherwise. It is assumed that all files will be either zipped or not. Default to True.
         ICC (bool): whether to apply the ICC profile when writing the file (True, to obtain 'ready to use' pixels), or to simply embed it if it exists (False). Default to False?
         multithreading (bool): whether to use multithreading or not. Default to True.
+        max_workers (int): number of workers for multithreading. Default to 12.
         label (bool): whether to add the label image if it exists. Default to True.
         macro (bool): whether to add the macro image if it exists. Default to True.
     '''

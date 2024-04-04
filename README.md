@@ -16,9 +16,16 @@ The code is provided in 2 ways:
 - a python script to be run through Command Line Interface
 
 The code was tested using a Windows operating system with WSL2.
-The dependencies are listed in the requirements.txt file used for creating the virtual environment.
+The main dependencies are:
+- openslide and openslide-python
+- imagecodecs
+- tifffile
+- scikit-image
+- natsort
+- numpy
+- pillow
 
-Using a 13th Gen Intel(R) Core(TM) i7-13700K with 32Gb of RAM, the required time to convert a 1.5 Gb DICOM WSI into a SVS-like is around 1 minute.
+Using a 13th Gen Intel(R) Core(TM) i7-13700K with 32Gb of RAM, the required time to convert a 1.5 Gb DICOM WSI into a SVS-like is around 1 minute. Please note that the Colab implementation is much slower, especially without a high CPU RAM environment. Using a local machine must be favored.
 
 The ICC profile, when embedded in the original DICOM file, can be either embedded in the SVS-like file (can be read with viewer supporting ICC profiles such as Aperio ImageScope) or directly applied during conversion and thus writing ready-to-use pixels (allowing an optimized color rendering whatever the software used for reading. The ICC profile will not be embedded in this case). It should be expected an increase of 50% of required time for conversion when applying the ICC profile. 
 Label and macro images, when present in the original DICOM file, can either be removed or retained during conversion.
@@ -33,7 +40,9 @@ Using CLI, the arguments are:
 
 Example usage:
 - unzipping files, embedding the ICC profile, using multithreading and adding label and macro images:
+  
 ```python /path_to/DICOMtoSVS.py /path_to_folder/DCM_zip```
 
 - unzipping files, applying the ICC profile, using multithreading and adding label and macro images:
+
 ```python /path_to/DICOMtoSVS.py /path_to_folder/DCM_zip --ICC --no-label --no-macro```

@@ -17,7 +17,7 @@ The code is provided in 2 ways:
 
 The code was tested using a Windows operating system with WSL2.
 The main dependencies are:
-- openslide and openslide-python
+- openslide (> 4.0.0) and openslide-python
 - imagecodecs
 - tifffile
 - scikit-image

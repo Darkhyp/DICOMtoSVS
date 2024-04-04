@@ -25,7 +25,7 @@ The main dependencies are:
 - numpy
 - pillow
 
-Using a 13th Gen Intel(R) Core(TM) i7-13700K with 32Gb of RAM, the required time to convert a 1.5 Gb DICOM WSI into a SVS-like is around 1 minute. Please note that the Colab implementation is much slower, especially without a high CPU RAM environment. Using a local machine must be favored.
+Using a 13th Gen Intel(R) Core(TM) i7-13700K with 32Gb of RAM, the required time to convert a 1 Gb DICOM WSI into a SVS-like is around 30 seconds. Please note that the Colab implementation is much slower, especially without a high CPU RAM environment. Using a local machine must be favored with an optimized max_workers argument.
 
 The ICC profile, when embedded in the original DICOM file, can be either embedded in the SVS-like file (can be read with viewer supporting ICC profiles such as Aperio ImageScope) or directly applied during conversion and thus writing ready-to-use pixels (allowing an optimized color rendering whatever the software used for reading. The ICC profile will not be embedded in this case). It should be expected an increase of 50% of required time for conversion when applying the ICC profile. 
 Label and macro images, when present in the original DICOM file, can either be removed or retained during conversion.
@@ -35,6 +35,7 @@ Using CLI, the arguments are:
 - --zip : boolean, if the original files are zipped, default=True
 - --ICC : boolean, apply the ICC profile when writing, default=False (will then be embedded if exists)
 - --multithreading : boolean, whether multithreading must be used, default=True
+- --max_workers : integer, the number of max_workers for multithreading, default=12
 - --label : boolean, add label image if exists, default=True
 - --macro : boolean, add macro image if exists, default=True
 

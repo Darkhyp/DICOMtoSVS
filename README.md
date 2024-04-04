@@ -14,6 +14,9 @@ Here, we propose a python solution to convert DICOM WSI into SVS-like TIFF pyram
 The code is provided in 2 ways: 
 - a colab-compatible jupyter notebook
 - a python script to be run through Command Line Interface
+<a target="_blank" href="https://colab.research.google.com/github/bertrandchauveau/DICOMtoSVS/blob/main/DICOM_to_SVS.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 
 The code was tested using a Windows operating system with WSL2.
 The main dependencies are:

@@ -48,5 +48,6 @@ Installation instructions and usage (Windows executable):
 - decompress the file in your local disk, ending up with a DICOMtoSVS folder containing a DICOMtoSVS.exe file and a _internal folder, containing required files to run the executable. Do not separate the _internal folder from the exe file. 
 - optional: create a desktop shortcut of the .exe file (right-clik, create shortcut)
 - when running the .exe file for the first time, Windows will display a warning message "unknown publisher". This is an expected behavior from Windows.
-- ruuning the .exe file will launch a command prompt and, a few seconds later, another window to select the arguments for the WSI conversion
+- ruuning the .exe file will launch a command prompt and, a few seconds later, another window to select the arguments for the WSI conversion. You should point out the folder where the native DICOM files are (.../native_folder). It is not expected that the selected folder contains other file or folder types.
+- The command prompt is automatically closed at the end of the script. Converted files are stored at .../native_folder_ouput
 

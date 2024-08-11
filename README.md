@@ -3,8 +3,6 @@ To convert brightfield and singleplex fluorescence DICOM whole slide images into
 
 This work is currently under review at a scientific journal. A link to the published article and to the Windows executable will be displayed in due time.
 
-![Figure 1_github](https://github.com/bertrandchauveau/DICOMtoSVS/assets/110421330/366ac44e-8521-4338-a475-c829192bf125)
-
 Pathology Departments are encouraged to use Digital Imaging and Communication in Medicine (DICOM) for their workflow of whole slide images (WSI), like radiologists before them. While this allows for a secure and universal workflow in routine with WSI from scanners of various vendors, as of 2024, DICOM adoption for WSI remains emerging and DICOM is not supported by some web-based platforms dedicated to collaborative diagnosis and research (e.g. TeleSlide, Cytomine).
 
 DICOM is expected to be the future reference WSI format, and as such commercial software will ultimately add support for it. In the meantime, one solution is to convert DICOM WSI into a more common WSI file format. Here, is proposed an SVS-like pyramidal TIFF organization. SVS files are actual TIFF files, with no proprietary extensions, and is the WSI file format of Aperio (Leica Biosystems).

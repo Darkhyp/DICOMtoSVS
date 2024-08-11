@@ -23,8 +23,8 @@ The main dependencies used were:
 - imagecodecs 2024.6.1
 - tifffile 2024.2.12
 - natsort 8.4.0
-- numpy 2.0.0
-- pillow 10.3.0
+- numpy 1.26.4
+- pillow 10.4.0
 - pylibjpeg 2.0.1
 
 The Windows executable was tested on Windows 10 Professional 22H2 and Windows 11 Professional 23H2. The only required dependency is Microsoft Visual C++ Redistributable, available at https://learn.microsoft.com/fr-fr/cpp/windows/latest-supported-vc-redist?view=msvc-170.

@@ -38,7 +38,8 @@ The arguments, to be defined through Tkinter user interface are:
 - macro : boolean, add macro image if exists
 
 Usage (Python script):
-- considering a Python environment with the required dependencies
+- considering a Python environment with the required dependencies:
+  
 ```python /path_to/DICOMtoSVS.py```
 
 Installation instructions and usage (Windows executable):

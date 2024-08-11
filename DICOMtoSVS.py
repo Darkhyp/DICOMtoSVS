@@ -18,6 +18,7 @@ from PIL import Image
 import tkinter as tk
 from tkinter import filedialog, messagebox
 import argparse
+import sys
 from struct import unpack, unpack_from
 from sys import byteorder
 from typing import (
@@ -788,6 +789,7 @@ def main():
 
         from_DICOM_to_SVS(path_to_folder, zip_option, label_option, macro_option)
         #messagebox.showinfo("Success", "Conversion completed")
+        sys.exit() #exit python once done
 
     # Create the main window
     #window = tk.Tk()

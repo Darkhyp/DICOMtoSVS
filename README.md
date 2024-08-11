@@ -37,7 +37,11 @@ The arguments, to be defined through Tkinter user interface are:
 - label : boolean, add label image if exists
 - macro : boolean, add macro image if exists
 
-Installation instructions (Windows executable):
+Usage (Python script):
+- considering a Python environment with the required dependencies
+```python /path_to/DICOMtoSVS.py```
+
+Installation instructions and usage (Windows executable):
 - end-users must seek the validation of their information technology service management before using the application on an institutional device
 - download the DICOMtoSVS.zip file at: pending
 - decompress the file in your local disk, ending up with a DICOMtoSVS folder containing a DICOMtoSVS.exe file and a _internals folder, containing required files to run the executable. Do not separate the _internals folder from the exe file. 

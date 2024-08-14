@@ -10,7 +10,7 @@ DICOM is expected to be the future reference WSI format, and as such commercial 
 Here, is proposed a Python-based solution to convert DICOM WSI into SVS-like TIFF pyramidal images. These slides can then be opened by common software supporting the SVS format (Aperio ImageScope, QuPath, TeleSlide, ...). This conversion mainly relies on the Pydicom package for reading DICOM slides and tifffile for writing the SVS-like file.
 
 The code is provided in 3 ways: 
-- a colab-compatible jupyter notebook for easy testing
+- a Colab-compatible jupyter notebook for easy testing
 - a Python script to be run through Command Line Interface
 - a Windows executable created using PyInstaller 6.9.0, as such prior coding knowledge is not required
 <a target="_blank" href="https://colab.research.google.com/github/bertrandchauveau/DICOMtoSVS/blob/main/DICOM_to_SVS.ipynb">
@@ -29,7 +29,7 @@ The main dependencies used were:
 
 The Windows executable was tested on Windows 10 Professional 22H2 and Windows 11 Professional 23H2. The only required dependency is Microsoft Visual C++ Redistributable, available at https://learn.microsoft.com/fr-fr/cpp/windows/latest-supported-vc-redist?view=msvc-170.
 
-Using a 13th Gen Intel(R) Core(TM) i7-13700K with 32Gb of RAM, the mean time to convert a 1Gb WSI is about 10 seconds. Label and macro images, when present in the original DICOM file, can either be removed or retained during conversion.
+Using a 13th Gen Intel(R) Core(TM) i7-13700 with 16Gb of RAM, the mean time to convert a 1Gb WSI is about 18 seconds. Label and macro images, when present in the original DICOM file, can either be removed or retained during conversion.
 
 The arguments, to be defined through Tkinter user interface are:
 - path_to_folder : string, path to the folder containing the DICOM files

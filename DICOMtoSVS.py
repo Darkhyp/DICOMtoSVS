@@ -187,7 +187,14 @@ def get_main_metada(path_to_dcm, pixel_size):
     try:
         obj_power = int(ds.get_item(Tag(0x0048, 0x0105))[0][0x0048, 0x0112].value) #Objective Lens Power
     except Exception as e:
-        obj_power = 'Unknown'
+        pixelsize_x = round(float(ds.ImagedVolumeWidth) / float(ds.TotalPixelMatrixColumns) * 1000, 6) #mm=>µm
+        if pixelsize_x < 0.30: #some web-based platforms like TeleSlide seem to require a value
+            obj_power = 40
+        else:
+            if pixelsize_x < 0.60:
+                obj_power = 20
+            else:
+                obj_power = 10
         
     try:
         session_mode = ds.get_item(Tag(0x0040, 0x0555))[1][0x0040, 0xa160].value #Session Mode
@@ -494,7 +501,7 @@ def from_DICOM_to_SVS(path_to_folder, is_zipped: bool, label: bool, macro: bool)
         try:
             quality_jpeg = int(metadata['(0040, 0555)'][6]['(0040, a30a)'])  #Aperio GT450DX. Not found in 3DHistech slides from Pannoramic scan II
         except Exception as e:
-            quality_jpeg = 'Unknown'
+            quality_jpeg = None
 
         # Define pyramid levels
         #already defined by decipher_dcm_folder()

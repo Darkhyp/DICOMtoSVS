@@ -5,9 +5,9 @@ This work is currently under review at a scientific journal. A link to the publi
 
 Pathology Departments are encouraged to use Digital Imaging and Communication in Medicine (DICOM) for their workflow of whole slide images (WSI), like radiologists before them. While this allows for a secure and universal workflow in routine with WSI from scanners of various vendors, as of 2024, DICOM adoption for WSI remains emerging and DICOM is not supported by some web-based platforms dedicated to collaborative diagnosis and research (e.g. TeleSlide, Cytomine).
 
-DICOM is expected to be the future reference WSI format, and as such commercial software will ultimately add support for it. In the meantime, one solution is to convert DICOM WSI into a more common WSI file format. Here, is proposed an SVS-like pyramidal TIFF organization. SVS files are actual TIFF files, with no proprietary extensions, and is the WSI file format of Aperio (Leica Biosystems).
+DICOM is expected to be the future reference WSI format, and as such commercial software will ultimately add support for it. In the meantime, one solution is to convert DICOM WSI into a more common WSI file format. Here is proposed an SVS-like pyramidal TIFF organization. SVS files are actual TIFF files, with no proprietary extensions, and is the WSI file format used by Aperio (Leica Biosystems).
 
-Here, is proposed a Python-based solution to convert DICOM WSI into SVS-like TIFF pyramidal images. These slides can then be opened by common software supporting the SVS format (Aperio ImageScope, QuPath, TeleSlide, ...). This conversion mainly relies on the Pydicom package for reading DICOM slides and tifffile for writing the SVS-like file.
+Here is proposed a Python-based solution to convert DICOM WSI into SVS-like TIFF pyramidal images. These slides can then be opened by common software supporting the SVS format (Aperio ImageScope, QuPath, TeleSlide, ...). This conversion mainly relies on the Pydicom package for reading DICOM slides and tifffile for writing the SVS-like file.
 
 The code is provided in 3 ways: 
 - a Colab-compatible jupyter notebook for easy testing
@@ -37,15 +37,15 @@ The arguments, to be defined through Tkinter user interface are:
 - label : boolean, add label image if exists
 - macro : boolean, add macro image if exists
 
-Usage (Python script):
+## Usage (Python script):
 - considering a Python environment with the required dependencies:
   
 ```python /path_to/DICOMtoSVS.py```
 
-Installation instructions and usage (Windows executable):
+## Installation instructions and usage (Windows executable):
 - end-users must seek the validation of their information technology service management before using the application on an institutional device
 - download the DICOMtoSVS.zip file at: pending
-- decompress the file in your local disk, ending up with a DICOMtoSVS folder containing a DICOMtoSVS.exe file and a _internal folder, containing required files to run the executable. Do not separate the _internal folder from the exe file. 
+- decompress the file in your local disk, ending up with a DICOMtoSVS folder containing a "DICOMtoSVS.exe" file and a "_internal" folder, containing required files to run the executable. Do not separate the "_internal" folder from the exe file. 
 - optional: create a desktop shortcut of the .exe file (right-clik, create shortcut)
 - when running the .exe file for the first time, Windows will display a warning message "unknown publisher". This is an expected behavior from Windows.
 - running the .exe file will launch a command prompt and, a few seconds later, another window to select the arguments for the WSI conversion. You should point out the folder where the native DICOM files are (.../native_folder). It is not expected that the selected folder contains other file or folder types.

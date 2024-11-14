@@ -824,10 +824,10 @@ def main():
         start_time = timer()
         from_DICOM_to_SVS(path_to_folder, zip_option, label_option, macro_option)
         elapsed_time = timer() - start_time
-
         print(f"Elapsed time: {elapsed_time:.2f} seconds")
-        messagebox.showinfo("Success", f"Conversion completed in {elapsed_time:.2f} seconds")
-        # sys.exit()  # exit python once done
+
+        # messagebox.showinfo("Success", "Conversion completed")
+        sys.exit()  # exit python once done
 
     # Create the main window
     # window = tk.Tk()
